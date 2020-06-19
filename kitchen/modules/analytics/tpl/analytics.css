@@ -1,0 +1,109 @@
+body.leftmode>#rightbar,body.rightmode>#rightbar{
+	max-width:40px;
+}
+@media (min-width: 861px) AND (max-width: 1260px){
+	#topbar,#environment{
+		width:calc(100% - 80px);
+	}
+}
+@media (min-width: 1261px){
+	#topbar,#environment{
+		width:calc(100% - 322px);
+	}
+}
+
+svg{
+	max-width:1200px;
+}
+#infobar{
+	z-index:6;
+	color:#DDD;
+	position:fixed;
+	min-width:160px;
+	padding:6px 12px;
+	border-radius:5px;
+	display:inline-block;
+	background-color:#333;
+	border:3px solid #EEE;
+	box-shadow:10px 10px 4px -4px rgba(0,0,0,0.5);
+}
+#total{
+	color:#888;
+	font-size:15px;
+	line-height:1.6;
+	padding:0px 28px;
+	text-align:justify;
+}
+#total::after{
+	width:100%;
+	content:"";
+	display:inline-block;
+}
+#total>span{
+	display:inline-block;
+}
+.page-analytics th{
+	color:#555;
+	font-size:15px;
+}
+.page-analytics td>a{
+	color:#479;
+}
+.page-analytics td>a:hover{
+	color:#E62;
+}
+.pagination{
+	padding:20px;
+}
+.pagination>a{
+	color:#2B6;
+	margin:0px 4px;
+	font:bold 32px title;
+}
+.pagination>a:hover{
+	color:#E62;
+}
+.pagination>a.selected{
+	color:#888;
+}
+
+/******************************************************/
+
+.header,
+.context,
+.subheader,
+.description{
+	color:#555;
+	padding:10px;
+	cursor:pointer;
+	max-width:180px;
+	min-height:20px;
+	max-height:74px;
+	overflow:hidden;
+	text-align:left;
+	font:15px main;
+	
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.header:hover,
+.context:hover,
+.subheader:hover,
+.description:hover{
+	outline:1px solid orange;
+}
+#rating{
+	color:#BBB;
+	font-size:12px;
+}
+#rating>label{
+	color:gold;
+	font-size:20px;	
+}
+
+tr:nth-child(even){
+	background-color:#EEE;
+}
+tr:nth-child(odd){
+	background-color:#FFF;
+}

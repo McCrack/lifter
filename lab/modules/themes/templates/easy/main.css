@@ -1,0 +1,18 @@
+body{
+	margin:0px;
+}
+a{
+	text-decoration:none;
+}
+
+#header{
+	
+}
+#footer{
+	
+}
+
+.float-page{
+	min-width:1004px;
+	max-width:1260px;
+}

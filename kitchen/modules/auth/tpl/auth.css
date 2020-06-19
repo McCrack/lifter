@@ -1,0 +1,77 @@
+@font-face {
+  font-family:'auth';
+  font-style:normal;
+  font-weight:normal;
+  src: local('auth'), url(/modules/auth/tpl/fonts/auth.ttf) format('truetype');
+}
+@font-face {
+  font-family:'regular';
+  font-style:normal;
+  font-weight:normal;
+  src: local('regular'), url(/modules/auth/tpl/fonts/regular.woff) format('truetype');
+}
+/**************************************/
+
+html,body{
+ margin:0px;
+ height:100%;
+}
+body{
+ background:url(/themes/subway/imgs/doodles.png);
+}
+#preview{
+ height:40%;
+ position:relative;
+ text-align: right;
+ border-bottom:1px solid white;
+ box-shadow:0px 12px 4px -10px rgba(0,0,0,0.5);
+ background:url(/themes/subway/imgs/gun_metal.png);
+}
+#preview>h1{
+ letter-spacing:4.5px;
+ font:bold 100px regular;
+ position:absolute;
+ bottom:-3vh;
+ right:4vw;
+ color:white;
+}
+form{
+ float: right;
+ width: 331px;
+ color:#444;
+ padding:2vw 4vw;
+ text-align:right;
+ font:20px regular;
+}
+input{
+ width:160px;
+ padding:8px;
+ height:38px;
+ outline: none;
+ border-radius:3px;
+ margin-bottom:18px;
+ margin-left: 20px;
+ border:1px solid #999;
+ box-sizing:border-box;
+ font-family: regular;
+}
+button{
+ width:44px;
+ height:38px;
+ color:black;
+ vertical-align:top;
+ box-sizing:border-box;
+ font:16px auth;
+ 
+ color:white;
+ cursor:pointer;
+ border-radius:3px;
+ border:1px outset #999;
+ background-color:#36B;
+ background:linear-gradient(to top, #888, #BBB);
+}
+button:hover{
+ border-color:#A25;
+ background-color:#B36;
+ background:linear-gradient(to top, #A25, #C47);
+}

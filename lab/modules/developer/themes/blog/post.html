@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<!--<meta name="google-signin-client_id" content="">-->
+		<link rel="stylesheet" type="text/css" href="/themes/blog/main.css">
+		<link rel="stylesheet" type="text/css" href="/themes/blog/content.css">
+		<link rel="icon" type="image/png" href="/themes/blog/imgs/favicon.png">
+<style id="dynamic-css">
+#content-area{
+	float:left;
+	padding:10px 40px;
+	width:calc(100% - 302px);
+}
+#sidebar{
+	width:300px;
+	float:right;
+}
+</style>
+		<!--<script async id="facebook-jssdk" src="//connect.facebook.net/ru_RU/sdk.js"></script>-->
+		
+		<script src="/js/gbAPI.js"></script>
+		<script src="/themes/blog/main.js"></script>
+		
+		<script>
+		window.onload=function(){
+			Page.id = doc.querySelector("meta#PageID").content;
+			Page.url = doc.querySelector("meta#canonical").content;
+			Page.section = doc.querySelector("meta#ontopic").dataset.section;
+			Page.published = doc.querySelector("meta#published").dataset.timestamp;
+			
+			var scrtmr;
+			stream = new Stream("subfeed");
+			var toolslider = new ToolSlider;
+			var screenHeight = (self.innerHeight || doc.documentElement.clientHeight)*2;
+			window.onscroll = function(){
+				clearTimeout(scrtmr);
+				scrtmr = setTimeout(function(){
+					let scroll = (doc.documentElement.scrollTop || doc.body.scrollTop)+100;
+					if(scroll>150){
+						toolslider.setSlide(1);
+						if(scroll>(stream.subfeed.offsetHeight+stream.subfeed.offsetTop-screenHeight)){
+							stream.getStickers("subfeed");
+						}
+						if(scroll>(stream.feed.offsetHeight+stream.feed.offsetTop-screenHeight)){
+							stream.getStickers("feed");
+						}
+					}else{
+						toolslider.setSlide(0);
+					}
+				}, 300);
+			}
+			/*
+			window.fbAsyncInit = FB.init({
+				appId:doc.querySelector("meta#AppID").content,
+				xfbml:true,
+				cookie:true,
+				status:true,
+				version:"v2.4"
+			});
+			*/
+			analytics = new Analytics;
+			//FB.getLoginStatus(CheckLoginStatus);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<div id="header-block">
+			<div id="header">
+			<div id="subheader">
+			    <a id="logo" href="/"><img src="/themes/blog/imgs/logo.png" align="left" hspace="5" vspace="8"></a>
+				<div id="toolbar-slide-points" class="right">
+					<div class="slide-point up" data-dir="-1"></div>
+					<div class="slide-point down" data-dir="1"></div>
+				</div>
+				<div id="toolbar" data-current="0">
+					<div id="level-1" class="tool-slide">
+						<a class="soc-lnk" target="_blank" href="/rss" title="RSS Лента">&#xf10d;</a>
+
+						<a class="soc-lnk" target="_blank" href="http://vk.com/" title="Вконтакте">&#xf114;</a>
+						<a class="soc-lnk" target="_blank" href="https://twitter.com/" title="Мы в Twitter">&#xf112;</a>
+
+						<a class="soc-lnk" target="_blank" href="http://chats.viber.com/" title="Viber чат">&#xf113;</a>
+						<a class="soc-lnk" target="_blank" href="https://facebook.com/" title="Мы в Faccebook">&#xf101;</a>
+						<a class="soc-lnk" target="_blank" href="https://www.instagram.com/" title="Мы в Instagram">&#xf106;</a>
+					</div>
+					<div id="level-2" class="tool-slide">
+						<div onclick="share_fb()" class="share fb" title="Поделиться в facebook"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<nav id="main-menu">
+		
+		</nav>
+		<div class="float-page">
+			<div id="content-area"><br>
+			<article id="content">
+				<div class="fb-save right"> </div><br>
+				<header><br>
+					<h1>Header</h1>
+					<h2>Subheader</h2>
+					<figure>
+						<img src="/images/NIA.jpg">
+					</figure>
+				</header>
+			</article>
+			<footer id="publication-by"></footer>
+			<div id="soc-menu">
+				<div id="soc-btn-submenu" align="right">
+					<div id="fb-like" class="fb-like left" data-href="" data-layout="standard" data-action="like" data-show-faces="true" data-share="false" data-width="360px"></div>
+					
+					<div onclick="share_fb()" class="share fb" title="Поделиться в facebook"></div>
+					<br><br><br>
+					<button onclick="share_vk()" class="soc-btn vk" title="Вконтакте">&#xf114;</button>
+					<button onclick="share_twitter()" class="soc-btn tw" title="Twitter">&#xf112; Twitter</button>
+					<button onclick="share_ok()" class="soc-btn ok" title="Однокласники">&#xf10b;</button>
+					<button onclick="send_fb()" class="soc-btn messanger" title="Facebook">&#xf103; Messenger</button>
+					<button onclick="share_gp()" class="soc-btn gp" title="Google+">&#xf105;</button>					
+				</div>
+			</div>
+			<div id="feed">
+				
+			</div>
+			</div>
+			<aside id="sidebar">
+				
+			</aside>
+		</div>
+		<div class="fb-quote"></div>
+		<br clear="both"><br>
+		<div align="center">
+			<label id="up-btn" title="На верх" onclick="softScroll.y(0)">On Top</label>
+		</div>
+		<div id="footer">
+			<nav id="tags-cloud">
+				
+			</nav>
+			<div id="publics">
+				<a class="soc-lnk" target="_blank" href="/rss" title="RSS Лента">&#xf10d; RSS Лента</a>
+				<a class="soc-lnk" target="_blank" href="https://facebook.com/" title="Faccebook">&#xf101; Мы в Facebook</a>
+				
+				<a class="soc-lnk" target="_blank" href="http://vk.com/" title="Вконтакте">&#xf115; Вконтакте</a>
+				<a class="soc-lnk" target="_blank" href="https://twitter.com/" title="Мы в Twitter">&#xf112; Мы в Twitter</a>
+				
+				<a class="soc-lnk" target="_blank" href="http://chats.viber.com/" title="Viber chat">&#xf113; Viber чат</a>
+				<a class="soc-lnk" target="_blank" href="https://www.instagram.com/" title="Instagram">&#xf106; Мы в Instagram</a>
+			</div>
+			<br clear="both">
+			<div id="copyright" align="right">
+				© 2016 Goolybeep
+			</div>
+		</div>
+	</body>
+</html>

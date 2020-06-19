@@ -1,0 +1,14 @@
+<?php
+	$handle = "b".time();
+?>
+<div id="<?php print($handle); ?>" class="box"  onmousedown="boxList.focus(this)" style="width:99%;max-width:350px">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<div class="box-title">
+		<span class="close-box" title="close" data-translate="title" onclick="boxList.drop('<?php print($handle); ?>')"></span>
+	</div>
+	<div class="box-body" style="background-color:#B25;color:white;resize:none">
+		<br>
+		<h1 align="center">Access denied.</h1>
+		<br>
+	</div>
+</div>

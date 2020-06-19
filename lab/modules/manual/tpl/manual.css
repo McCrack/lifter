@@ -1,0 +1,85 @@
+#manual{
+	color:white;
+	background-color:#18B;
+}
+#manual>.content{
+	padding:0px 10px;
+}
+#editor{
+	width:540px;
+	height:calc(100% - 36px);
+}
+
+/**************************************************/
+
+#content{
+	font-size:14px;
+	font-family:open-sans;
+}
+#content>div,#content>p,#content>h1,#content>h2,#content>h3,#content>h4,#content>blockquote,#content>figure{
+	margin:4px 0px;
+}
+#content>p,#content>h1,#content>h2,#content>h3,#content>h4{
+	padding:16px 6%;
+}
+#content>p{
+	font-size:16px;
+	line-height:1.5;
+}
+#content>h1{
+	font-size:32px;
+	font-family:comfortaa;
+}
+#content>h2{
+	font-size:26px;
+	font-weight:normal;
+	font-family:ubuntu;
+}
+a{
+	color:#F86;
+	text-decoration:none;
+}
+a:hover{
+	color:#EA4;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+figure{
+	width:100%;
+	padding:0px;
+}
+figure>img{
+	width:100%;
+}
+figcaption{
+	color:#777;
+	min-height:24px;
+	padding:5px 10px;
+	
+	font-size:16px;
+	font-family:boblic;
+}
+blockquote{
+	padding:40px 60px;
+	border-left:5px solid #C75;
+	font-size: 18px;
+	font-style:italic;
+	font-family:tinos;
+	line-height:1.5;
+}
+.video{
+	height:0;
+	overflow:hidden;
+	position:relative;
+	padding-bottom:56.25%;
+	background-color:white;
+}
+.video>iframe{
+	position:absolute;
+	top:4%;
+	left:2%;
+	width:96%;
+	height:92%;
+}

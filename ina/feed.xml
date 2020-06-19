@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>Lifter | Помогает расти</title>
+		<link>http://lifter.com.ua/</link>
+		<description>Lifter - проект, который позволяет вам рассказывать друг другу в facebook интересные истории и давать интересные советы.</description>
+		<language>ru_RU</language>
+		<generator>Goolybeep</generator>
+	</channel>
+</rss>

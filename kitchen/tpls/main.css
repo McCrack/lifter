@@ -1,0 +1,338 @@
+@import url("/tpls/smallscreen.css") (max-width: 860px);
+@import url("/tpls/bigscreen.css") (min-width: 861px);
+
+@font-face {
+  font-family:'main';
+  font-style:normal;
+  font-weight:normal;
+  src: local('calibri'), url(/tpls/fonts/calibri.ttf) format('truetype');
+}
+@font-face {
+  font-family:'tools';
+  font-style:normal;
+  font-weight:normal;
+  src: local('tools'), url(/tpls/fonts/tools.ttf) format('truetype');
+}
+/*******************************************************************/
+
+html,body{
+	margin:0px;
+	height:100%;
+	font-family:main;
+}
+
+table{
+	border-width:0px;
+}
+
+/*******************************************************************/
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+/*******************************************************************/
+
+#goolybeep{
+	height:36px;
+	display:block;
+	overflow:hidden;
+}
+#goolybeep>img{
+	height:36px;
+	min-width:240px;
+	object-fit:cover;
+}
+#environment{
+	overflow:auto;
+}
+
+/*******************************************************************/
+
+.tab{
+	display:none;
+	overflow:auto;
+}
+.panel{
+	height:36px;
+	padding:0px 10px;
+	box-sizing:border-box;
+}
+.caption{
+	height:36px;
+	padding:0px 5px;
+	font:bold 22px/1.6 title;
+}
+/*******************************************************************/
+
+.toolbar{
+	display:inline-block;
+}
+.tool{
+	text-align:center;
+	vertical-align:top;
+}
+span.tool,label.tool{
+	cursor:pointer;
+	font:normal 22px tools, auxiliary;
+}
+.toolbar>span.tool,.toolbar>label.tool{
+	height:36px;
+	display:inline-block;
+	box-sizing:border-box;
+}
+input.tool,select.tool,button.tool{
+	height:26px;
+	margin:5px 2px;
+	padding:0px 4px;
+	border:1px solid #DDD;
+	box-sizing:border-box;
+	font:14px tools, main;
+}
+button.tool{
+	cursor:pointer;
+	font:normal 16px tools, auxiliary;
+}
+
+/*******************************************************************/
+
+.root{
+	margin-left:12px;
+	padding-left:8px;
+	border-left:1px dotted #AAA;
+}
+.tree-item,.tree-root-item,.pattern-file,.pattern-folder{
+	transition:.25s;
+	color:inherit;
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+	font:18px/1.8 title, tools;
+}
+.folder,.openfolder,.file,.domain{
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+	white-space:nowrap;
+}
+.folder::before,.openfolder::before,.domain::before,.file::before{
+	margin:0px 5px;
+	font:22px/1.2 tools;
+	vertical-align:middle;
+	display:inline-block;
+}
+.folder::before{
+	color:#DB8;
+	content:"\f07b";
+}
+.openfolder::before{
+	color:#EC9;
+	content:"\f07c";
+}
+.domain::before{
+	color:#6AC;
+	content:"\f0b6";
+}
+.file[data-type='application']::before{
+	content:"\e924";
+}
+.file[data-type='image']::before{
+	content:"\e906";
+}
+.file[data-type='video']::before{
+	content:"🎦";
+}
+.file[data-type='text']::before{
+	content:"\f0f6";
+}
+.pattern-file::before{
+	content:"\f15b";
+	margin-right:5px;
+}
+.pattern-folder::before{
+	color:#CCC;
+	content:"\f07c";
+	margin-right:5px;
+}
+
+/* File sticker *********************************************************/
+
+.file-sticker{
+	color:#555;
+	width:186px;
+	margin:4px 8px;
+	text-align:center;
+	vertical-align:top;
+	display:inline-block;
+}
+.file-sticker>input{
+	display:none;
+}
+.file-sticker>figure{
+	margin:0px;
+	padding:6px;
+	min-height:182px;
+	border-radius:3px;
+	border:1px solid transparent;
+}
+.file-sticker>figure:hover{
+	border-color:#B8D6FB;
+	background:linear-gradient(to top, #EBF3FD, #FAFBFD);
+}
+.file-sticker>input:checked+figure{
+	border-color:#7DA2CE;
+	box-shadow:8px 8px 4px -8px rgba(0,0,0,0.5);
+	background:linear-gradient(to top, #C1DCFC, #DCEAFC);
+}
+.file-sticker>figure>img{
+	margin:0 auto;
+	display:block;
+	height:162px;
+	max-width:100%;
+	border-radius:3px;
+	object-fit:contain;
+	object-position:center bottom;
+}
+
+/*******************************************************************/
+
+.sticker{
+	color:#555;
+	margin:5px;
+	width:200px;
+	cursor:pointer;
+	text-align:center;
+	vertical-align:top;
+	display:inline-block;
+	overflow:hidden;
+}
+.sticker:hover{
+	color:#D60;
+}
+.sticker>div.preview{
+	height:140px;
+	background-size:contain;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.sticker>img.preview{
+	height:140px;
+	max-width:200px;	
+}
+
+/*******************************************************************/
+
+#substrate,#loading-indicator{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:99;
+	opacity:0.0;
+	position:fixed;
+	transition:all 0.4s ease;
+}
+#substrate{
+	overflow:auto;
+	padding-top:100%;
+}
+body>.box{
+	position:fixed;
+}
+#substrate>.box{
+	position:relative;
+}
+.box{
+	width:99%;
+	display:inline-block;
+	box-shadow:15px 15px 4px -4px rgba(0,0,0,0.6);
+}
+.box-title{
+	cursor:default;
+	padding-left:8px;
+}
+.box-body{
+	overflow:auto;
+	min-height:80px;
+}
+.box-footer{
+	text-align:right;
+	padding:12px 0px 4px 0px;
+}
+.box-footer button{
+	cursor:pointer;
+	min-width:100px;
+	padding:6px 10px;
+}
+.close-box{
+	float:right;
+	cursor:pointer;
+	display:inline-block;
+}
+
+/*********************************/
+
+.HTMLDesigner,.uploader-frame{
+	width:100%;
+	margin:0px;
+	display:block;
+	border-width:0px;
+	outline:1px solid #DDD;
+}
+
+/***********************************************************************************************************/
+
+.context-menu{
+	z-index:100;
+	position:fixed;
+	min-width:180px;
+	padding:15px 2px;
+	background-color:#F0F0F0;
+	
+}
+.context-item{
+	
+	font-size:18px;
+	cursor:pointer;
+	padding:5px 0 5px 8px;
+}
+.context-item::after{
+	color:#665;
+	font-size:15px;
+	margin-left:2px;
+	padding-left:8px;
+	vertical-align:top;
+	display:inline-block;
+	content:attr(data-itm);
+}
+
+.datepicker{
+	z-index:100;
+	width:196px;
+	position:fixed;
+}
+.pickerbar{
+	padding:4px;
+	text-align:justify;
+	font:15px tools,auxiliary;
+	border-bottom:1px solid #789;
+}
+.pickerbar::after{
+	content:"";
+	width:100%;
+	display:inline-block;
+}
+.pickerbar>label{
+	display:inline-block;
+}
+.datepicker span{
+	width:28px;
+	height:22px;
+	line-height:1.6;
+	cursor:default;
+	text-align:center;
+	display:inline-block;
+}

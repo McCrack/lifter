@@ -1,0 +1,63 @@
+body{
+	margin:0px;
+	font-family:calibri;
+}
+a{
+	text-decoration:none;
+}
+
+#header,.float-page, #content, #footer, #main-menu, #sidebar, #pagination{
+	outline:1px dotted #AAA;
+}
+#header{
+	height:64px;
+	background-color:#EEE;
+}
+#logo{
+	float:left;
+	margin:10px;
+}
+#main-menu{
+	height:20px;
+	padding:10px;
+	margin:8px 3px;
+	text-align:center;
+	background-color:#DDD;
+}
+.float-page{
+	padding:10px;
+	margin:10px auto;
+	min-width:984px;
+	max-width:1200px;
+	background-color:#EEE;
+}
+#sidebar{
+	float:right;
+	width:280px;
+	padding:10px;
+	min-height:460px;
+	background-color:#DDD;
+}
+#content{
+	padding:20px;
+	min-height:440px;
+	background-color:#FFF;
+	width:calc(100% - 360px);
+}
+#pagination{
+	height:20px;
+	padding:10px;
+	background-color:#DDD;
+}
+#footer{
+	color:#CCC;
+	padding:20px;
+	min-height:234px;
+	background-color:#333;
+}
+#copyright{
+	color:#444;
+	padding:1px 10px;
+	font:15px calibri;	
+	background:linear-gradient(to top, #FFF, #CCC);
+}

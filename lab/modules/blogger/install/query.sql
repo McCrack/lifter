@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS `gb_blogfeed`(
+	`PageID` INT UNSIGNED NOT NULL,
+	`ID` INT UNSIGNED NOT NULL,
+	`language` ENUM('ru','uk', 'en') NOT NULL DEFAULT 'ru',
+	`published` SET('Not published','Published','Freeze') NOT NULL DEFAULT 'Not published',
+	`tid` INT UNSIGNED,
+	`header` VARCHAR(256) NOT NULL DEFAULT '', 
+	`subheader` VARCHAR(1024) NOT NULL DEFAULT '', 
+	`preview` VARCHAR(256) NOT NULL DEFAULT '/images/NIA.jpg',
+	`alt_prw` VARCHAR(256) NOT NULL DEFAULT '/images/NIA.jpg',
+	`UserID` INT UNSIGNED, 
+	UNIQUE(`ID`,`language`),
+	PRIMARY KEY(`PageID`),
+	FOREIGN KEY (`PageID`) REFERENCES `gb_pages`(`PageID`)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	FOREIGN KEY (`tid`) REFERENCES `gb_tagination`(`tid`)
+		ON UPDATE CASCADE
+		ON DELETE SET NULL,
+	FOREIGN KEY (`UserID`) REFERENCES `gb_staff`(`UserID`)
+		ON UPDATE CASCADE
+		ON DELETE SET NULL
+)ENGINE=InnoDB CHARACTER SET utf8;
+
+CREATE TABLE IF NOT EXISTS `gb_blogcontent`(
+	`PageID` INT UNSIGNED NOT NULL,
+	`content` BLOB,
+	PRIMARY KEY(`PageID`),
+	FOREIGN KEY (`PageID`) REFERENCES `gb_pages`(`PageID`)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+)ENGINE=InnoDB CHARACTER SET utf8;
+
+CREATE TABLE IF NOT EXISTS `gb_www`(
+	`PageID` INT UNSIGNED NOT NULL,
+	`content` BLOB,
+	PRIMARY KEY(`PageID`),
+	FOREIGN KEY (`PageID`) REFERENCES `gb_pages`(`PageID`)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+)ENGINE=InnoDB CHARACTER SET utf8;

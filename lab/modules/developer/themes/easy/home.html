@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<title>Bilion</title>
+
+	<link rel="stylesheet" type="text/css" href="/themes/_________________/main.css">
+	<link rel="stylesheet" type="text/css" href="themes/_________________/content.css">
+	<link rel="icon" type="image/png" href="/themes/_________________/imgs/favicon.png">
+	
+	<script type="text/javascript" src="/js/gbAPI.js"></script>
+	<script type="text/javascript" src="/themes/_________________/main.js"></script>
+	<script>
+		window.onload = function(){
+			Page.id = doc.querySelector("meta#PageID").content;
+			Page.url = doc.querySelector("meta#canonical").content;
+			
+			analytics = new Analytics;
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a id="logo" href="/"><img src="/themes/_________________/imgs/logo.png"></a>
+	</div>
+	<nav id="main-menu">
+		Main Menu
+	</nav>
+	<div class="float-page">
+		<aside id="sidebar">
+			Sidebar
+		</aside>
+		<article id="content">
+			Content
+		</article>
+	</div>
+	<div class="float-page">
+		<div id="pagination" align="right">
+			Pagination
+		</div>
+	</div>
+	<div id="footer">
+		Footer
+	</div>
+	<div id="copyright" align="center">
+		© 2016 Goolybeep
+	</div>
+</body>
+</html>

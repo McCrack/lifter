@@ -1,0 +1,69 @@
+#user-form{
+	font-size:14px;
+	line-height:1.8;
+	padding:30px 8px;
+}
+#user-form>fieldset{
+	border-radius:3px;
+}
+
+@media (max-width: 920px){
+	#user-form>fieldset{
+		padding:20px;
+	}
+	#user-form>fieldset input{
+		width:92%;
+	}
+}
+@media (min-width: 920px){
+	#user-form>fieldset{
+		padding:10px 10px 16px 172px;
+		background:url(/images/avatars/profile.png) 15px 15px no-repeat rgba(255,255,255,0.8);
+		background-size:auto 164px;
+	}
+	#user-form>fieldset>div{
+		float:left;
+		padding:0px 10px;
+	}
+	#user-form>fieldset input{
+		width:160px;
+	}
+}
+@media (min-width: 1520px){
+	#user-form>fieldset input{
+		width:180px;
+	}
+}
+
+
+#id-group>span{
+	display:inline-block;
+}
+#user-form input,#user-form select{
+	width:90px;
+	color:#555;
+	padding:6px 10px;
+	border-radius:3px;
+	border:1px solid #ABB;
+	background-color:#EEE;
+}
+#user-form input:focus{
+	background-color:#DFE;
+}
+
+#environment button{
+	color:#EEE;
+	cursor:pointer;
+	margin:6px 2px;
+	border-width:0px;
+	border-radius:3px;
+	padding:6px 18px;
+	font:18px auxiliary;
+	vertical-align:top;
+	background:linear-gradient(to top, #07A, #29C);
+}
+#environment button:hover{
+	background:linear-gradient(to top, #C45, #F78);
+}
+
+/************************************************/

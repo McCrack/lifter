@@ -1,0 +1,73 @@
+{
+	"general":{
+		"base folder":{
+			"type":"enum",
+			"value":"www",
+			"valid":["dev","lab","www"]
+		},
+		"default module":{
+			"type":"string",
+			"value":"welcome",
+			"valid":["ads","analytics","auth","blogger","code-editor","community","developer","editor","installer","keywords","manual","patterns","settings","sitemap","staff","store","uploader","welcome","wordlist"]
+		},
+		"language":{
+			"type":"enum",
+			"value":"uk",
+			"valid":["ru","uk","en"]
+		},
+		"themes":{
+			"type":"enum",
+			"value":"subway",
+			"valid":["subway"]
+		},
+		"privat":{
+			"type":"srting",
+			"value":"5168745600413030",
+			"valid":[""]
+		}
+	},
+	"DataBase":{
+		"host":{
+			"type":"string",
+			"value":"",
+			"valid":[""]
+		},
+		"db name":{
+			"type":"string",
+			"value":"",
+			"valid":[""]
+		},
+		"user name":{
+			"type":"string",
+			"value":"",
+			"valid":[""]
+		},
+		"password":{
+			"type":"string",
+			"value":"",
+			"valid":[""]
+		}
+	},
+	"domains":{
+		"../www":{
+			"type":"string",
+			"value":"http://lifter.com.ua",
+			"valid":[""]
+		},
+		"../m":{
+			"type":"string",
+			"value":"http://m.lifter.com.ua",
+			"valid":[""]
+		},
+		"../lab":{
+			"type":"string",
+			"value":"http://lab.lifter.com.ua",
+			"valid":[""]
+		},
+		"../img":{
+			"type":"srting",
+			"value":"http://img.lifter.com.ua",
+			"valid":[""]
+		}
+	}
+}

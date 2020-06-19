@@ -1,0 +1,24 @@
+#leftbar,#rightbar,#topbar,#environment{
+	clear:both;
+}
+#rightbar{
+	height:100%;
+}
+#rightbar>.tab{
+	
+}
+#bodymode{
+	display:none;
+}
+.tabbar{
+	width:100%;
+	min-height:36px;
+}
+.tab{
+	width:100%;
+	min-height:calc(100% - 36px);
+}
+.toolbar>span.tool,.toolbar>label.tool{
+	min-width:36px;
+	padding-top:8px;
+}

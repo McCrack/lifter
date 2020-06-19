@@ -1,0 +1,15 @@
+07 Nov, 18:57:11 - Finger: ; Key: ; Ref: / / 5.53.115.6
+07 Nov, 18:57:11 - Finger: ; Key: 1552943871; Ref: /favicon.ico / 5.53.115.6
+07 Nov, 18:58:27 - Finger: bcc0f787d2b78082cb1b1455b4fdfab1; Key: 786619680; Ref: /blogger / 109.86.84.151
+07 Nov, 18:58:31 - Finger: ca5c41635e7a7b382d28e032eb1eba9f; Key: 2125065628; Ref: /blogger / 178.92.11.182
+07 Nov, 19:04:07 - Finger: ; Key: 82590220; Ref: / / 5.53.115.6
+07 Nov, 19:14:56 - Finger: ; Key: ; Ref: /blogger/ru/1/4233/ru / 149.154.167.171
+07 Nov, 19:14:57 - Finger: ; Key: ; Ref: /blogger/ru/1/4214/ru / 91.237.121.2
+07 Nov, 19:14:58 - Finger: ; Key: 960869119; Ref: /favicon.ico / 91.237.121.2
+07 Nov, 23:42:39 - Finger: ; Key: ; Ref: / / 212.22.211.35
+07 Nov, 23:42:39 - Finger: ; Key: 13327742; Ref: /favicon.ico / 212.22.211.35
+08 Nov, 00:47:44 - Finger: c2abe4a99eca8604052e4d0e59c71ef9; Key: 927964077; Ref: / / 178.92.11.182
+08 Nov, 01:02:39 - Finger: feeae9e8396c228dc95729f3877cb90a; Key: 168365854; Ref: /favicon.ico / 212.22.211.35
+08 Nov, 01:50:57 - Finger: 48295d1843793bd032237dde022ff2d7; Key: 1070303119; Ref: /uploader/image-frame / 212.22.211.35
+08 Nov, 02:05:01 - Finger: 1f2a99ab464893e225a3ac40440bc87e; Key: 282868641; Ref: / / 212.22.211.35
+08 Nov, 02:06:56 - Finger: 6f07fbecb60d9daa3fbea517bbd4c2b9; Key: 1346385739; Ref: /uploader/image-frame / 212.22.211.35

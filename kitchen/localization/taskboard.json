@@ -1,0 +1,14 @@
+{
+	"uk":{
+		"default task":"Стандартна задача",
+		"create card":"Створити Картку"
+	},
+	"ru":{
+		"default task":"Стандартная задача",
+		"create card":"Создать карточку"
+	},
+	"en":{
+		"default task":"Default Task",
+		"create card":"Create Card"
+	}
+}

@@ -1,0 +1,180 @@
+#content{
+	font-size:14px;
+	font-family:open-sans;
+}
+#content>p{
+	font-size:16px;
+	line-height:1.5;
+}
+#content>h1{
+	font-size:32px;
+	font-family:comfortaa;
+}
+#content>h2{
+	font-size:26px;
+	font-weight:normal;
+	font-family:ubuntu;
+}
+a{
+	color:#07E;
+}
+a:hover{
+	color:#E84;
+}
+img{
+	height:auto;
+	max-width:100%;
+}
+figure{
+	width:100%;
+	margin:0px;
+	padding:0px;	
+}
+figure>img{
+	width:100%;
+}
+figcaption{
+	color:#777;
+	min-height:24px;
+	padding:5px 10px;
+	
+	font-size:16px;
+	font-family:boblic;
+}
+blockquote{
+	padding:40px 60px;
+	border-left:5px solid #C75;
+	font-size: 18px;
+	font-style:italic;
+	font-family:tinos;
+	line-height:1.5;
+}
+.video{
+	height:0;
+	overflow:hidden;
+	position:relative;
+	padding-bottom:56.25%;
+	background-color:white;
+}
+.video>iframe{
+	position:absolute;
+	top:4%;
+	left:2%;
+	width:96%;
+	height:92%;
+}
+.embed{
+	width:100%;
+	margin:5px 0px;
+	background-color:#DDD;
+}
+
+/*********************************************/
+.leftpoint{
+	float:left;
+	margin-right:-50px;
+	background-image:url("/images/back.png");
+}
+.rightpoint{
+	float:right;
+	margin-left:-50px;
+	background-image:url("/images/next.png");
+}
+.leftpoint,.rightpoint{
+	width:50px;
+	cursor:pointer;
+	position:relative;
+	padding-bottom:58%;
+	background-size:40% auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	transition:background 0.4s ease;
+}
+.leftpoint:hover,.rightpoint:hover{
+	background-color:rgba(255,255,255,0.4);
+}
+.slideshow{
+	float:left;
+	width:100%;
+	overflow:auto;
+	font-size:0px;
+	white-space:nowrap;
+	background-color:#FFF;
+	scroll-snap-type:mandatory;
+    scroll-snap-points-x:repeat(100%);
+}
+.slide{
+	width:100%;
+	padding-bottom:58%;
+	vertical-align:top;
+	display:inline-block;
+	background-size:cover;
+	background-position:center;
+}
+.imagelist{
+	clear:both;
+	padding:3px;
+	background-color:#383E49;
+}
+.imagelist>img{
+	margin:4px;
+	width:100px;
+	height:100px;
+	cursor:pointer;
+	object-fit:cover;
+	vertical-align:middle;
+	outline:1px solid #DDD;
+}
+.imagelist>img:hover{
+	outline:2px solid white;
+}
+
+/*********************************************/
+
+.slider-substrate{
+	float:left;
+	width:100%;
+	font-size:0px;
+	margin-top:5px;
+	cursor:w-resize;
+	display:inline-block;
+	background-size:auto 100%;
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+.subslide{
+	width:100%;
+	overflow:hidden;
+	display:inline-block;
+	outline:2px solid #FFF;
+}
+
+/*********************************************/
+
+.hidden-image{
+	font-size:0px;
+	background:url(/images/clicktoview_ru.png) center center no-repeat #145;
+}
+#content>figure.hidden-image{
+	background-color:#145;
+}
+span.hidden-image{
+	margin:10px;
+	display:inline-block;
+}
+@keyframes blur{
+	from{ opacity:0.05; }
+	to{ opacity:1.0; }
+}
+.hidden-image>img{
+	opacity:0.05;
+	cursor:pointer;
+	transition:opacity 0.5s ease;
+	animation:blur 0.1s ease ;
+	animation-fill-mode:both;
+	animation-play-state:paused;
+}
+.hidden-image>img:active{
+	opacity:1.0;
+	animation-play-state:running;
+}

@@ -1,0 +1,20 @@
+@media (min-width: 1000px){
+	#environment{
+		width:calc(100% - 316px);
+	}
+	#rightbar{
+		width:36px;
+	}
+	#rightbar:hover{
+		width:540px;
+		overflow:auto;
+	}
+}
+@media (min-width: 1520px){
+	#environment{
+		width:calc(100% - 820px);
+	}
+	#rightbar{
+		width:540px;
+	}
+}

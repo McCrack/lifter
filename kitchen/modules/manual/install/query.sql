@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `gb_manuals`(
+	`id` INT(4) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`pid` INT(4) UNSIGNED DEFAULT 0,
+	`title` VARCHAR(64) NOT NULL DEFAULT '',
+	`language` ENUM('ru','uk', 'en') NOT NULL DEFAULT 'ru',
+	`content` TEXT NOT NULL DEFAULT '',
+	PRIMARY KEY(`id`),
+	INDEX(`pid`),
+	UNIQUE(`title`,`language`)
+)ENGINE=MyISAM CHARACTER SET utf8;

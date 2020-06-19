@@ -1,0 +1,54 @@
+@media (max-width: 860px){
+	#environment{
+		height:100%;
+	}
+	#topbar,#environment{
+		width:100%;
+	}
+}
+@media (min-width: 861px) AND (max-width: 1539px){
+	#topbar,#environment{
+		width:calc(100% - 41px) !important;
+	}
+}
+@media (min-width: 1540px){
+	#topbar,#environment{
+		margin-right:581px !important;
+		width:calc(100% - 581px) !important;
+	}
+}
+#topbar,#environment{
+	margin-left:0px !important;
+}
+
+#rightbar>.tab{
+	color:#CCC;
+	background-color:#383E49;
+}
+#rightbar>.tab>fieldset{
+	padding:8px;
+	border-width:1px 0 0 0;
+}
+#css-directory.tab>fieldset{
+	column-count:3;
+	-moz-column-count:3;
+	-webkit-column-count:3;
+}
+#html-directory.tab>fieldset{
+	column-count:4;
+	-moz-column-count:4;
+	-webkit-column-count:4;
+}
+#rightbar>.tab>fieldset>legend{
+	color:#777;
+	font:bold 26px title;
+}
+#rightbar>.tab>fieldset>a{
+	width:100%;
+	color:#CCC;
+	display:inline-block;
+	font:16px/1.8 auxiliary;
+}
+#js-directory code,#php-directory code{
+	color:#FDC;
+}

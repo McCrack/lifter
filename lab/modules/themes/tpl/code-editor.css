@@ -1,0 +1,47 @@
+tr.level-0{
+	color:#EEE;
+	background-color:#444;
+}
+tr.level-1{
+	color:#444;
+	background-color:#EEE;
+}
+tr.level-2, tr>th{
+	color:#444;
+	background-color:#FFF;
+}
+tr>td:focus{
+	color:#444;
+	background-color:#DFE;
+}
+.input-cell{
+	width:100%;
+	height:100%;
+	border:0px;
+	box-sizing:border-box;
+	background-color:transparent;
+}
+#css-directory{
+	background-color:#383E49;
+}
+#css-directory>fieldset{
+	padding:8px;
+	column-count:3;
+	-moz-column-count:3;
+	-webkit-column-count:3;
+	border-width:1px 0px 0px 0px;
+}
+#css-directory>fieldset>legend{
+	color:#777;
+	font:bold 26px title;
+}
+#css-directory>fieldset>a{
+	width:100%;
+	color:#BBB;
+	cursor:pointer;
+	display:inline-block;
+	font:16px/1.8 main;
+}
+#css-directory>fieldset>a:hover{
+	color:#FFF;
+}

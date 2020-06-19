@@ -1,0 +1,67 @@
+<!-- Cover page -->
+<amp-story standalone bookend-config-src="http://m.lifter.com.ua/amp-stories.json">
+	<a href="/" id="logo"><amp-img src="/stories-logo.png" width="58" height="58"></amp-img></a>
+	<?php
+	$cover = array_shift($p['story']);
+	$invite = array_pop($p['story']);
+	?>
+	<amp-story-page id="cover">
+		<amp-story-grid-layer template="vertical">
+			<?if($cover[bgtype]=="image"):?>
+			<amp-img src="<?=$cover['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+			<?elseif($cover['bgtype']=="video"):?>
+			<amp-video autoplay loop width="720" height="1280" layout="responsive">
+				<source src="<?=$cover['background']?>" type="<?=$cover['mime']?>">
+			</amp-video>
+			<?endif?>
+			<div class="<?=$cover['align']?>" align="<?=$cover['txtalign']?>">
+				<?if($cover['caption']):?>
+				<h1 class="caption"><?=$cover['caption']?></h1>
+				<?endif?>
+				<?if($cover['text']):?>
+				<h2 class="text" style="background-color:<?=$cover['text-bg-color']?>;color:<?=$cover['text-color']?>"><?=$cover['text']?></h2>
+				<?endif?>
+			</div>
+		</amp-story-grid-layer>
+	</amp-story-page>
+	<?foreach($p['story'] as $num=>$card):?>
+	<amp-story-page  id="page<?=$num?>">
+		<amp-story-grid-layer template="vertical">
+			<?if($card[bgtype]=="image"):?>
+			<amp-img src="<?=$card['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+			<?elseif($card['bgtype']=="video"):?>
+			<amp-video autoplay loop width="720" height="1280" layout="responsive">
+				<source src="<?=$card['background']?>" type="<?=$card['mime']?>">
+			</amp-video>
+			<?endif?>
+			<div class="<?=$card['align']?>" align="<?=$card['txtalign']?>">
+				<?if($card['caption']):?>
+				<div class="caption"><?=$card['caption']?></div>
+				<?endif?>
+				<?if($card['text']):?>
+				<div class="text" style="background-color:<?=$card['text-bg-color']?>;color:<?=$card['text-color']?>"><?=$card['text']?></div>
+				<?endif?>
+			</div>
+		</amp-story-grid-layer>
+	</amp-story-page>
+	<?endforeach?>
+	<amp-story-page id="last-screen">
+		<amp-story-grid-layer template="vertical">
+			<?if($invite[bgtype]=="image"):?>
+			<amp-img src="<?=$invite['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+			<?elseif($invite['bgtype']=="video"):?>
+			<amp-video autoplay loop width="720" height="1280" layout="responsive">
+				<source src="<?=$invite['background']?>" type="<?=$invite['mime']?>">
+			</amp-video>
+			<?endif?>
+			<div class="<?=$invite['align']?>" align="<?=$invite['txtalign']?>">
+				<?if($invite['caption']):?>
+				<div class="caption"><?=$invite['caption']?></div>
+				<?endif?>
+				<?if($invite['text']):?>
+				<div class="text" style="background-color:<?=$invite['text-bg-color']?>;color:<?=$invite['text-color']?>"><?=$invite['text']?></div>
+				<?endif?>
+			</div>
+		</amp-story-grid-layer>
+	</amp-story-page>
+</amp-story>

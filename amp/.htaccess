@@ -1,0 +1,20 @@
+# Кодировка
+AddDefaultCharset utf-8
+
+# Запретить индексацию папок без индексного файла
+Options -Indexes
+
+#Options +FollowSymlinks
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+
+# Включить mod_rewrite
+RewriteEngine on
+RewriteBase /
+
+# Выполнять скрипты в файлах с расширением .php
+AddType application/x-httpd-php .php
+
+# ЧПУ
+RewriteRule !^(.*)(\.png|\.txt|\.jpg|\.jpeg|\.gif|\.html|\.xml)$ index.php?params=%{REQUEST_URI} [QSA,NC,L]

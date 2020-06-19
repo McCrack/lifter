@@ -1,0 +1,27 @@
+#environment>table{
+	border-bottom:0px solid #AAA;
+	border-width:0px 0px 1px 0px;
+}
+#environment>table>thead{
+	color:#EEE;
+	font:tiny 16px auxiliary;
+	background-color:#29C;
+	background:linear-gradient(to top, #333, #555);
+}
+#environment>table>tbody{
+	color:#555;
+	font:16px main;
+}
+#environment>table>tbody>tr:nth-child(odd){
+	background-color:white;
+}
+#environment>table>tbody>tr:nth-child(even){
+	background-color:#EEE;
+}
+#environment>table>tbody>tr:hover{
+	cursor:default;
+	background-color:#DEF;
+}
+#environment>table>tbody>tr>td:focus{
+	background-color:#DFE;
+}

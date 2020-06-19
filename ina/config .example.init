@@ -1,0 +1,11 @@
+{
+	"general":{
+		"site name":{"type":"string","value":"Lifter","valid":[""]},"default module":{"type":"enum","value":"feed","valid":["404","feed","render"]},"default template":{"type":"srting","value":"image","valid":["image","video","story"]},"theme":{"type":"enum","value":"blog","valid":["blog"]},"domain":{"type":"srting","value":"lifter.com.ua","valid":[""]},"subdomain":{"type":"enum","value":"ina","valid":["amp","dev","img","ina","kitchen","lab","m","www"]},"desktop subdomain":{"type":"enum","value":"www","valid":["amp","dev","img","ina","kitchen","lab","m","www"]},"language":{"type":"enum","value":"ru","valid":["ru"]}},"open graph":{"fb:app_id":{"type":"string","value":"119878838351040","valid":[""]},"fb:pages":{"type":"string","value":"248223498667848","valid":[""]},"fb:admins":{"type":"string","value":"konstantin.shiyan","valid":[""]}},"localization":{"ru":{"type":"enum","value":"ru_RU","valid":["ru_RU"]},"uk":{"type":"enum","value":"uk_UA","valid":["uk_UA"]},"en":{"type":"enum","value":"en_US","valid":["en_GB","en_IN","en_PI","en_UD","en_US"]}
+	},
+	"DataBase":{
+		"host":{"type":"string","value":"","valid":[""]},
+		"db name":{"type":"string","value":"","valid":[""]},
+		"user name":{"type":"string","value":"","valid":[""]},
+		"password":{"type":"string","value":"","valid":[""]}
+	}
+}

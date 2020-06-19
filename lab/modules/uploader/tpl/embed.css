@@ -1,0 +1,160 @@
+@font-face {
+  font-family:'tools';
+  src: local('tools'), url(/tpls/fonts/tools.ttf) format('truetype');
+}
+@font-face {
+  font-family:'main';
+  font-style:normal;
+  font-weight:normal;
+  src: local('calibri'), url(/tpls/fonts/calibri.ttf) format('truetype');
+}
+html,body{
+	margin:0px;
+	height:100%;
+	background-color:white;
+}
+#topbar{
+	right:0px;
+	z-index:10;
+	position:fixed;
+	outline:1px solid #AAA;
+	width:calc(100% - 224px);
+	box-shadow:0px 4px 4px -4px rgba(0,0,0,0.6);
+	background:linear-gradient(to top, #DDD, #FFF);
+}
+#toolbar{
+	float:left;
+	width:36px;
+	height:100%;
+	box-shadow:2px 0px 4px -2px rgba(0,0,0,0.5);
+	background:linear-gradient(to left, #DDD, #FFF);
+}
+.tool{
+	color:#555;
+	height:36px;
+	cursor:pointer;
+	text-align:center;
+	box-sizing:border-box;
+	font:normal 22px tools, main;
+}
+#topbar .tool{
+	display:inline-block;
+	padding:6px 8px 0px 8px;
+}
+#toolbar .tool{
+	display:block;
+	padding-top:6px;
+}
+.tool:hover{
+	color:#FFF;
+	background-color:#444;
+}
+
+#leftbar{
+	float:left;
+	width:35px;
+	height:100%;
+	overflow:hidden;
+	transition:all 0.4s ease;
+}
+#uploader{
+	height:100%;
+	width:260px;
+}
+#preview{
+	height:100%;
+	object-fit:cover;
+	width:calc(100% - 36px);
+	transition:all 0.4s ease;
+}
+#folder{
+	 float:left;
+	 margin-top:36px;
+	 overflow-y:auto;
+	 width:calc(100% - 224px);
+	 height:calc(100% - 36px);
+	 background-color:#F5F5F5;
+}
+body:hover>#leftbar{
+	width:260px;
+}
+body:hover>#preview{
+	width:calc(100% - 261px);
+}
+
+#explorer{
+	color:#555;
+	width:224px;
+	height:100%;
+	padding:10px;
+	overflow:auto;
+	box-sizing:border-box;
+	background-color:#FAFAFA;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+/*******************************************************************/
+
+.root{
+	margin-left:4px;
+	padding-left:16px;
+	white-space:nowrap;
+	border-left:1px dotted #AAA;
+}
+.folder,.openfolder,.image,.file{
+	color:#777;
+	display:block;
+	cursor:pointer;
+	font:18px main;
+	text-decoration:none;
+}
+.openfolder{
+	font-weight:bold;
+}
+.folder:hover,.openfolder:hover,.file:hover,.image:hover{
+	color:#4CE;
+}
+.folder::before,.openfolder::before,.image::before{
+	margin:0px 5px;
+	font:22px/1.2 tools;
+	vertical-align:middle;
+	display:inline-block;
+}
+.folder::before{
+	color:#DA6;
+	content:"\f07b";
+}
+.openfolder::before{
+	color:#EB7;
+	content:"\f07c";
+}
+.image::before{
+	content:"\e906";
+}
+
+/*******************************************************************/
+
+.sticker{
+	color:#555;
+	margin:5px;
+	width:240px;
+	cursor:pointer;
+	text-align:center;
+	vertical-align:top;
+	display:inline-block;
+	font-family:main;
+}
+.sticker>figcaption:hover{
+	color:#D60;
+	cursor:pointer;
+}
+.sticker>img.preview{
+	width:100%;
+	height:140px;
+	object-fit:cover;
+}

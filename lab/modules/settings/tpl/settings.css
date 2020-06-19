@@ -1,0 +1,36 @@
+#environment>table{
+	border-bottom:0px solid #AAA;
+	border-width:0px 0px 1px 0px;
+}
+#environment>table>tbody{
+	color:#555;
+	font:16px main;
+}
+#environment>table>tbody>tr:hover{
+	cursor:default;
+	background-color:#DEF;
+}
+#environment>table>tbody>tr>td:focus{
+	background-color:#DFE;
+}
+#brancher{
+	color:#CCC;
+	background-color:#058;
+}
+#brancher label{
+	display:block;
+	font:18px/1.6 title;
+}
+#brancher label:hover{
+	color:#BFD;
+}
+#brancher label.item{
+	cursor:pointer;
+}
+#brancher label.checked, #brancher label.disabled{
+	color:#FFF;
+	font-weight:bold;
+}
+.red{
+	color:#A46;
+}

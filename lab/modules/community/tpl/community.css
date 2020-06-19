@@ -1,0 +1,91 @@
+#topbar input{
+	text-align:left;
+	width:calc(100% - 340px);
+}
+#topbar select{
+	font-size:16px;
+}
+#general{
+	padding:10px;
+	column-count:2;
+	-moz-column-count:2;
+	-webkit-column-count:2;
+	
+	background-color:#354045;
+}
+#general>span{
+	color:#FFF;
+	width:100%;
+	padding:5px 8px;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#general>span>small{
+	color:#DDD;
+}
+#options{
+	padding:10px;
+}
+#options>table{
+	border:1px solid #AAA;
+}
+#options>table>tbody>tr:hover,#citizens tbody>tr:hover{
+	cursor:default;
+	background-color:#DEF;
+}
+#options>table>tbody>tr>td:focus{
+	background-color:#DFE;
+}
+#interests{
+	column-count:4;
+	-moz-column-count:4;
+	-webkit-column-count:4;
+	
+	background-color:#354045;
+	padding:16px 16px 36px 16px;
+}
+#interests>span{
+	color:#BBB;
+	width:100%;
+	padding-top:5px;
+	cursor:pointer;
+	display:inline-block;
+}
+#interests>span:hover{
+	color:#FFF;
+}
+#mailing>fieldset{
+	margin-bottom:6px;
+	box-sizing:border-box;
+	border:1px solid #BBB;
+}
+#mailing input{
+	padding:4px 10px;
+	margin-bottom:5px;
+	border-radius:3px;
+	border:1px solid #AAA;
+	box-sizing:border-box;
+	background-color:#EEE;
+}
+#mailing>p{
+	margin:15px 10px 10px 15px;
+}
+.toolbtn{
+	color:#EEE;
+	cursor:pointer;
+	margin:6px 8px;
+	border-width:0px;
+	border-radius:3px;
+	padding:5.5px 18px;
+	font:18px auxiliary;
+	vertical-align:top;
+	background:linear-gradient(to top, #07A, #29C);
+}
+.toolbtn:hover{
+	color:white;
+	background:linear-gradient(to top, #C45, #F78);
+}
+#citizens thead>tr{
+	color:#777;
+	font:18px auxiliary;
+}

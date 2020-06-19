@@ -1,0 +1,380 @@
+#content{
+	font-size:14px;
+	white-space:normal;
+	font-family:open-sans;
+}
+/*
+#content>*{
+	white-space:normal;
+}
+*/
+#content>p,
+#content>h1,
+#content>h2,
+#content>h3,
+#content>h4,
+#content>ol,
+#content>ul,
+#content>figure,
+#content>section,
+#content>blockquote{
+	margin:4px 0px;
+	min-height:20px;
+	background-color:white;
+	outline:1px solid #DDD;
+	box-shadow:0px 10px 4px -10px rgba(0,0,0,0.4);
+}
+#content>p,
+#content>h1,
+#content>h2,
+#content>h3,
+#content>h4,
+#content>ul,
+#content>ol,
+#content>section{
+	padding:16px 4%;
+}
+#content>p,
+#content>section{
+	font-size:16px;
+	line-height:1.5;
+}
+#content>h1{
+	font-size:32px;
+	font-family:comfortaa;
+}
+#content>h2{
+	font-size:26px;
+	font-weight:normal;
+	font-family:ubuntu;
+}
+a{
+	color:#07E;
+	text-decoration:none;
+}
+a:hover{
+	color:#E84;
+}
+img{
+	height:auto;
+	max-width:100%;
+}
+figure{
+	width:100%;
+	margin:0px;
+	padding:0px;	
+}
+figure>img{
+	width:100%;
+}
+figcaption{
+	color:#777;
+	min-height:24px;
+	padding:5px 10px;
+	
+	font-size:16px;
+	font-family:boblic;
+}
+blockquote, .quote{
+	padding:40px 60px;
+	border-left:5px solid #C75;
+	font-size: 18px;
+	font-style:italic;
+	font-family:tinos;
+	line-height:1.5;
+}
+.video{
+	height:0;
+	overflow:hidden;
+	position:relative;
+	padding-bottom:56.25%;
+	background-color:white;
+}
+.video>iframe{
+	position:absolute;
+	top:4%;
+	left:2%;
+	width:96%;
+	height:92%;
+}
+.embed{
+	width:100%;
+	margin:4px 0px;
+	min-height:160px;
+	background-color:#DDD;
+	outline:1px solid #CCC;
+	box-shadow:0px 10px 4px -10px rgba(0,0,0,0.4);
+}
+.embed::before{
+	display:block;
+	content:"Embed";
+	padding:5px 8px;
+	
+	font:bold 16px jura;
+	border-bottom:1px solid #AAA;
+	background:linear-gradient(to top, #E5E5E5, #FFFFFF);
+	box-shadow:0px 6px 4px -6px rgba(0,0,0,0.5);
+}
+
+/*********************************************/
+
+.back-screen{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	padding-bottom:54%;
+}
+.front-screen{
+	top:0px;
+	width:100%;
+	position:absolute;
+}
+
+.leftpoint{
+	left:0px;
+	background-image:url("/images/back.png");
+}
+.rightpoint{
+	right:0px;
+	background-image:url("/images/next.png");
+}
+.leftpoint,.rightpoint{
+	z-index:2;
+	width:50px;
+	cursor:pointer;
+	height:calc(100% - 18px);
+	background-size:40% auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	transition:background 0.4s ease;
+}
+.leftpoint:hover,.rightpoint:hover{
+	background-color:rgba(255,255,255,0.4);
+}
+.slideshow{
+	height:100%;
+	overflow:auto;
+	font-size:0px;
+	white-space:nowrap;
+	background-color:#FFF;
+	scroll-snap-type:mandatory;
+    scroll-snap-points-x:repeat(100%);
+}
+.slideshow>.slide{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.imagelist{
+	clear:both;
+	padding:3px;
+	outline:1px solid #DDD;
+	background-color:#383E49;
+}
+.imagelist>img{
+	margin:4px;
+	width:100px;
+	height:100px;
+	cursor:pointer;
+	object-fit:cover;
+	vertical-align:middle;
+	outline:1px solid #DDD;
+}
+.imagelist>img:hover{
+	outline:2px solid white;
+}
+
+/*********************************************/
+
+.slider-substrate{
+	float:left;
+	width:100%;
+	font-size:0px;
+	margin-top:5px;
+	cursor:w-resize;
+	display:inline-block;
+	background-size:auto 100%;
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+.subslide{
+	width:100%;
+	overflow:hidden;
+	display:inline-block;
+	outline:2px solid #FFF;
+}
+
+/*********************************************/
+
+.hidden-image{
+	font-size:0px;
+	background:url(/images/clicktoview_ru.png) center center no-repeat #145;
+}
+#content>figure.hidden-image{
+	background-color:#145;
+}
+span.hidden-image{
+	margin:10px;
+	display:inline-block;
+}
+@keyframes blur{
+	from{ opacity:0.05; }
+	to{ opacity:1.0; }
+}
+.hidden-image>img{
+	opacity:0.05;
+	cursor:pointer;
+	transition:opacity 0.5s ease;
+	animation:blur 0.1s ease ;
+	animation-fill-mode:both;
+	animation-play-state:paused;
+}
+.hidden-image>img:active{
+	opacity:1.0;
+	animation-play-state:running;
+}
+
+/*********************************************/
+
+.adsense{
+	text-align:center;
+	outline:1px solid #CCC;
+	background-color:#F5F5F5;
+}
+.adsense[data-size='300x250']{
+	margin:10px;
+	width:300px;
+	height:250px;
+}
+.adsense[data-size='336x280']{
+	margin:10px;
+	width:336px;
+	height:280px;	
+}
+.adsense[data-size='300x600']{
+	margin:10px;
+	width:300px;
+	height:600px;
+}
+.adsense[data-size='468x60']{
+	width:468px;
+	height:60px;
+	margin:5px auto;
+}
+.adsense[data-size='728x90']{
+	width:728px;
+	height:90px;
+	margin:5px auto;
+}
+
+/********************************************************/
+
+section.card{
+	padding:0;
+}
+section.card>img{
+	width:38vw;
+	min-height:60vh;
+	object-fit:cover;
+}
+section.card>aside{
+	width:50.5vw;
+	min-height:60vh;
+	vertical-align:top;
+	display:inline-block;
+	background-color:#EEE;
+}
+section.card>aside>section{
+	display:flex;
+	flex-wrap:wrap;
+	min-height:60vh;
+	padding:0 2vw;
+	align-content:center;
+}
+
+/*----------------------claclulator.less----------------------*/
+
+.calculator{
+	.range-thumb{
+		width:24px;
+		height:24px;
+		cursor:pointer;
+		border-radius:50%;
+		border:3px solid #FFF;
+		background-color:#EEE;
+		background:linear-gradient(to top, #DDD, #FFF);
+	}
+	input[type='range']{
+		-webkit-appearance:none;
+		margin:0;
+		width:98%;	
+		height:6px;	
+		border-radius:3px;
+		background-color:#777;
+	
+		&::-webkit-slider-thumb{ .range-thumb; }
+		&::-moz-range-thumb{ .range-thumb; }
+		&::-ms-thumb{ .range-thumb; }
+		&::-moz-range-track{
+			background-color:#777;
+		}
+		&::-moz-range-progress{
+			height:8px;
+			border-radius:4px;
+			background-color:#FFDA6C;
+		}
+		
+	}
+}
+.calculator{
+	color:#777;
+	width:100%;
+	text-align:center;
+	font:16px/1.5 ubuntu;
+}
+.between{
+	text-align-last:justify;
+}
+.between>label{
+	color:white;
+	font-size:14px;
+	min-width:68px;
+	display:inline-block;
+	background-color:#555;
+	text-align-last:center;
+}
+.between>input{
+	text-align-last:center;
+}
+div.result{
+	padding-top:20px;
+	text-align:left;
+}
+#schedule-viewer{
+	display:none;
+}
+#schedule-viewer+label{
+	cursor:pointer;
+	font:18px/2.6 boblic;
+}
+#schedule-viewer+label+div{
+	clear:both;
+	max-height:0px;
+	overflow:hidden;
+}
+
+/*END-------------------claclulator.less----------------------*/
+
+.img-frm{
+	color:#FC4;
+	height:50vh;
+	padding:12vh 4vw;
+	background-size:cover;
+	font:20px calibri;
+	h2{
+		font:4vw ubuntu;
+	}
+	ol{
+		color:white;
+	}
+}

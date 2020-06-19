@@ -1,0 +1,61 @@
+
+#environment tbody>tr>td>img{
+	width:32px;
+	height:32px;
+	object-fit:cover;
+	border-radius:5px;
+}
+#environment table{
+	border-bottom:1px solid #AAA;
+}
+#environment tbody>tr:hover, #environment tbody>tr.selected{
+	color:#444;
+	cursor:default;
+	outline:1px dotted #222;
+	background-color:#EAF0F5;
+}
+#environment tbody>tr{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+#environment tbody>tr>td:focus{
+	background-color:#DFE;
+}
+#preview{
+	color:#DEF;
+	padding:2px;
+	position:fixed;
+	max-width:480px;
+	min-width:380px;
+	font:14px auxiliary;
+	background-color:#27B;
+	box-shadow:10px 10px 4px -6px rgba(0,0,0,0.5);
+}
+#preview>img{
+	max-width:100%;
+}
+#preview>div::after{
+	content:"";
+	width:100%;
+	display:inline-block;
+}
+#preview>div>span{
+	margin:10px 10px 0px 10px;
+	display:inline-block;
+}
+
+#fixed-btn{
+	float:right;
+	width:80px;
+	height:24px;
+	color:white;
+	cursor:pointer;
+	border-width:0px;
+	margin-right:5px;
+	background-color:#2C7;
+	border-radius:0px 0px 5px 5px;
+	box-shadow:6px 6px 4px -4px rgba(0,0,0,0.5);
+}
+#fixed-btn:hover,#fixed-btn.selected{
+	background-color:#F27;
+}

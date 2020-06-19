@@ -1,0 +1,60 @@
+#ads{
+	height:100%;
+}
+#ads-list{
+	overflow:auto;
+	padding:12px;
+	height:calc(100% - 125px);
+	border-bottom:1px solid #999;
+	background-image:url(/modules/ads/tpl/imgs/shattered.png);
+}
+.msg-item{
+	padding:10px;
+	max-width:450px;
+	margin:14px 0px;
+	border-radius:11px;
+	border:1px solid #BBB;
+	background-color:white;
+	box-shadow:10px 10px 4px -6px rgba(0,0,0,0.4);
+}
+#ads-list .msg-author{
+	color:#888;
+	font:bold 18px/1.8 title;
+}
+#ads-list .msg-published{
+	color:#D84;
+	font-size:12px;
+	margin-left:15px;
+}
+#ads-list .msg-body{
+	color:#555;
+	font-size:18px;
+	padding:8px 10px;
+	border-top:1px dotted #888;
+}
+#message-field{
+	resize:none;
+	margin:0px;
+	height:62px;
+	padding:10px;
+	border-width:0px;
+	vertical-align:top;
+	box-sizing:border-box;
+	width:calc(100% - 80px);
+	background-color:white;
+}
+#ads button{
+	width:80px;
+	height:64px;
+	color:white;
+	cursor:pointer;
+	font:22px tools;
+	border-width:0px;
+	background-color:#169;
+	background:linear-gradient(to top, #169, #18B);
+}
+#ads button:hover{
+	border:1px outset #A05;
+	background-color:#A05;
+	background:linear-gradient(to top, #A05, #E08);
+}

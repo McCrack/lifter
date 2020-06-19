@@ -1,0 +1,117 @@
+@media (max-width: 920px){
+	#environment{
+		height:100%;
+	}
+}
+#editor{
+	height:100%;
+}
+#environment table{
+	border-bottom:1px solid #AAA;
+}
+#environment tbody>tr>td>img{
+	width:32px;
+	height:32px;
+	object-fit:cover;
+	border-radius:5px;
+}
+#environment tbody>tr:hover, #environment tbody>tr.selected{
+	color:#444;
+	cursor:default;
+	outline:1px dotted #222;
+	background-color:#EAF0F5;
+}
+#environment tr{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+#preview{
+	color:#DEF;
+	padding:2px;
+	position:fixed;
+	max-width:480px;
+	min-width:380px;
+	font:14px auxiliary;
+	background-color:#27B;
+	box-shadow:10px 10px 4px -6px rgba(0,0,0,0.5);
+}
+#preview>img{
+	max-width:100%;
+}
+#preview>div::after{
+	content:"";
+	width:100%;
+	display:inline-block;
+}
+#preview>div>span{
+	margin:10px 10px 0px 10px;
+	display:inline-block;
+}
+
+#fixed-btn{
+	float:right;
+	width:80px;
+	height:24px;
+	color:white;
+	cursor:pointer;
+	border-width:0px;
+	margin-right:5px;
+	background-color:#2C7;
+	border-radius:0px 0px 5px 5px;
+	box-shadow:6px 6px 4px -4px rgba(0,0,0,0.5);
+}
+#fixed-btn:hover,#fixed-btn.selected{
+	background-color:#F27;
+}
+
+/*******************************************************************/
+
+#manual button{
+	color:#EEE;
+	cursor:pointer;
+	margin:4px;
+	border-width:0px;
+	border-radius:3px;
+	padding:5.5px 18px;
+	font:18px auxiliary;
+	vertical-align:top;
+	background:linear-gradient(to top, #07A, #29C);
+}
+#manual button:hover{
+	color:white;
+	background:linear-gradient(to top, #C45, #F78);
+}
+
+/*******************************************************************/
+
+#icons{
+	color:#888;
+	font-size:16px;
+	background-color:#F1F1F1;
+}
+#icons span.icon{
+	color:#444;
+	width:70px;
+	height:68px;
+	margin-bottom:4px;
+	text-align:center;
+	border-radius:4px;
+	font:32px/2.0 tools;
+	display:inline-block;
+	background-color:#D5D5D5;
+	background:linear-gradient(to top, #CCC, #EEE);
+}
+
+/*******************************************************************/
+
+.modules{
+	color:#555;
+	padding:12px;
+	display:block;
+	cursor:pointer;
+	font:18px auxiliary;
+	outline:1px outset #EEE;
+}
+.modules:hover{
+	background-color:#DAE0E5;
+}

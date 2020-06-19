@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="content-type" content="stamp"/>
+		<title><?=$info['header']?> - Lifter</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<meta property="fb:pages" content="<?=$cng->{"fb:pages"}?>">
+		<meta property="fb:admins" content="<?=$cng->{"fb:admins"}?>">
+		<meta property="fb:app_id" id="AppID" content="<?=$cng->{"fb:app_id"}?>">
+		<meta property="og:title" content="<?=$info['header']?>">
+		<meta property="og:type" content="stamp">
+		<meta property="og:url" id="canonical" content="http://lifter.com.ua/ru/<?=$info['ID']?>">
+		<meta property="og:image" content="<?=$p['preview']?>">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:description" content="<?=$info['subheader']?>">
+		<meta property="og:site_name" content="<?=$cng->{"site name"}?>">
+		<meta property="og:locale" content="ru_UA">
+		<meta name="id" content="<?=$info['PageID']?>">
+		<meta name="description" content="<?=$info['subheader']?>">
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+		<script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+		<style amp-custom>
+			amp-story-grid-layer>div>.caption{
+				color:white;
+				padding:0 10px;
+				display:inline;
+				font-size:26px;
+				line-height:1.5;
+				font-weight:bold;
+				background-color:rgba(0,0,0, .6);
+			}
+			amp-story-grid-layer>div>.text{
+				padding:10px;
+				font-size:18px;
+				line-height:1.1;
+			}
+			amp-story-grid-layer>div.bottom{
+				bottom:10px;
+			}
+			amp-story-grid-layer>div.top{
+				top:10px;
+			}
+			amp-story-grid-layer>div.center{
+				top:52%;
+				transform:translateY(-50%);
+			}
+			amp-story-grid-layer>div.fullscreen{
+				top:0;
+				height:100%;
+				background:linear-gradient(to bottom, rgba(0,0,0, .8), rgba(0,0,0, .2));
+			}
+			#logo{ top:0;left:0;z-index:2;font-size:0;display:inline-block;position:absolute;}
+			@font-face{ font-family:"ubuntu";font-style:normal;font-weight:normal;src:url("../fonts/ubuntu.ttf") format("truetype"); }
+			amp-story{font-family:"ubuntu";}
+			amp-story-page{ background-color:#000; }
+			amp-story-grid-layer{ padding:0 !important; }
+			img,video{ width:100%;height:100%;object-fit:cover; }
+			amp-story-grid-layer>div{ padding:10px 20px;box-sizing:border-box;z-index:2;position:absolute;}
+    	</style>
+    	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    	<script type="application/ld+json">{"@context":"http://schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http://lifter.com.ua/ru/"},"headline":"","image":[""],"datePublished":"1970-01-01T02:43:20+03:00","dateModified":"1970-01-01T03:00:00+03:00","author":{"@type":"Person","name":"Lifter Staff"},"publisher":{"@type":"Organization","name":"Lifter","logo":{"@type":"ImageObject","url":"http://lifter.com.ua/logo.png","width":"300px","height":"300px"}},"description":""}</script>
+    	<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-51627207-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<!-- Cover page -->
+		<amp-story standalone bookend-config-src="http://m.lifter.com.ua/amp-stories.json">
+			<a href="/" id="logo"><amp-img src="/stories-logo.png" width="58" height="58"></amp-img></a>
+			<?php
+			$cover = array_shift($p['story']);
+			$invite = array_pop($p['story']);
+			?>
+			<amp-story-page id="cover">
+				<amp-story-grid-layer template="vertical">
+					<?if($cover[bgtype]=="image"):?>
+					<amp-img src="<?=$cover['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+					<?elseif($cover['bgtype']=="video"):?>
+					<video autoplay loop width="720" height="1280" layout="responsive">
+						<source src="<?=$cover['background']?>" type="<?=$cover['mime']?>">
+					</video>
+					<?endif?>
+					<div class="<?=$cover['align']?>" align="<?=$cover['txtalign']?>">
+						<?if($cover['caption']):?>
+						<h1 class="caption"><?=$cover['caption']?></h1>
+						<?endif?>
+						<?if($cover['text']):?>
+						<h2 class="text" style="background-color:<?=$cover['text-bg-color']?>;color:<?=$cover['text-color']?>"><?=$cover['text']?></h2>
+						<?endif?>
+					</div>
+				</amp-story-grid-layer>
+      		</amp-story-page>
+      		<?foreach($p['story'] as $num=>$card):?>
+      		<amp-story-page  id="page<?=$num?>">
+				<amp-story-grid-layer template="vertical">
+					<?if($card[bgtype]=="image"):?>
+					<amp-img src="<?=$card['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+					<?elseif($card['bgtype']=="video"):?>
+					<video autoplay loop width="720" height="1280" layout="responsive">
+						<source src="<?=$card['background']?>" type="<?=$card['mime']?>">
+					</video>
+					<?endif?>
+					<div class="<?=$card['align']?>" align="<?=$card['txtalign']?>">
+						<?if($card['caption']):?>
+						<div class="caption"><?=$card['caption']?></div>
+						<?endif?>
+						<?if($card['text']):?>
+						<div class="text" style="background-color:<?=$card['text-bg-color']?>;color:<?=$card['text-color']?>"><?=$card['text']?></div>
+						<?endif?>
+					</div>
+				</amp-story-grid-layer>
+      		</amp-story-page>
+      		<?endforeach?>
+			<amp-story-page id="last-screen">
+				<amp-story-grid-layer template="vertical">
+					<?if($invite[bgtype]=="image"):?>
+					<amp-img src="<?=$invite['background']?>" width="720" height="1280" layout="responsive"></amp-img>
+					<?elseif($invite['bgtype']=="video"):?>
+					<amp-video autoplay loop width="720" height="1280" layout="responsive">
+						<source src="<?=$invite['background']?>" type="<?=$invite['mime']?>">
+					</amp-video>
+					<?endif?>
+					<div class="<?=$invite['align']?>" align="<?=$invite['txtalign']?>">
+						<?if($invite['caption']):?>
+						<div class="caption"><?=$invite['caption']?></div>
+						<?endif?>
+						<?if($invite['text']):?>
+						<div class="text" style="background-color:<?=$invite['text-bg-color']?>;color:<?=$invite['text-color']?>"><?=$invite['text']?></div>
+						<?endif?>
+					</div>
+				</amp-story-grid-layer>
+      		</amp-story-page>
+      	</amp-story>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+@font-face {
+  font-family:'auth';
+  font-style:normal;
+  font-weight:normal;
+  src: local('auth'), url(/modules/auth/tpl/fonts/auth.ttf) format('truetype');
+}
+/**************************************/
+
+body{
+	margin:0px;
+	background-color:black;
+	/*background:url(/themes/subway/imgs/doodles.png);*/
+}
+#preview{
+	height:60vh;
+	position:relative;
+}
+#preview>video{
+	height:100%;
+	object-fit:contain;
+}
+
+form{
+	color:#444;
+	float:right;
+	padding:2vw 4vw;
+	text-align:right;
+	font:20px calibri, arial,helvetica, tahoma,verdana;
+}
+input{
+	width:160px;
+	padding:8px;
+	height:38px;
+	border-radius:3px;
+	margin-bottom:18px;
+	border:1px solid #999;
+	box-sizing:border-box;
+}
+button{
+	width:44px;
+	height:38px;
+	color:black;
+	vertical-align:top;
+	box-sizing:border-box;
+	font:16px auth;
+	
+	color:white;
+	cursor:pointer;
+	border-radius:3px;
+	border:1px outset #999;
+	background-color:#36B;
+	background:linear-gradient(to top, #888, #BBB);
+}
+button:hover{
+	border-color:#A25;
+	background-color:#B36;
+	background:linear-gradient(to top, #A25, #C47);
+}

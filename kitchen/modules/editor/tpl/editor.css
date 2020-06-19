@@ -1,0 +1,98 @@
+@font-face {
+  font-family:'editor';
+  src: local('editor'), url(/modules/editor/tpl/fonts/editor.ttf) format('truetype');
+}
+html,body{
+	margin:0px;
+	height:100%;
+}
+body{
+	background-image:url(/modules/editor/tpl/shattered.png);
+}
+#body{
+	overflow:auto;
+	background-color:white;
+}
+@media (max-width: 340px){
+	#body{	
+		max-height:calc(100% - 76px);
+	}
+}
+@media (min-width: 340px){
+	#body{
+		margin:20px 4vw 0 4vw;
+		height:calc(100% - 64px);
+		box-shadow:10px 10px 8px -10px rgba(0,0,0, .3);
+	}
+}
+#content{
+	height:100%;
+	padding:5vh;
+	box-sizing:border-box;
+}
+#toolbar{
+	padding:0px 5px;
+	box-sizing:border-box;
+	box-shadow:0 10px 5px -10px rgba(0,0,0, .4);
+}
+#toolbar,.tool{
+	background-color:#EEE;
+	background:linear-gradient(to top, #DDD, #FFF);
+}
+.tool{
+	white-space:normal;
+	vertical-align:top;
+	display:inline-block;
+	box-sizing:border-box;
+}
+div.tool{
+	width:38px;
+	height:36px;
+	margin:0px -1px 2px -1px;
+}
+label.tool{
+	color:#777;
+	width:38px;
+	height:36px;
+	text-align:center;
+	border-radius:3px;
+	margin:0px -1px 2px -1px;
+	font:16px/2.2 editor,calibri,arial,verdana;
+}
+select.tool,input.tool{
+	color:#777;
+	height:30px;
+	min-width:64px;
+	border-radius:3px;
+	border:1px solid #BBB;
+	margin:4px 2px 2px 2px;
+}
+.toolset{
+	z-index:2;
+	width:inherit;
+	height:inherit;
+	overflow:hidden;
+	position:absolute;
+}
+label.tool:hover{
+	color:#FFF;
+	background-color:#555;
+	background:linear-gradient(to top, #B46, #E79);
+}
+label.tool:active{
+	background-color:#EEE;
+	background:linear-gradient(to top, #DDD, #FFF);
+}
+.toolset:hover{
+	height:auto;
+	padding:0px 8px 8px 0px;
+}
+.toolset:hover>.tool{
+	box-shadow:5px 5px 3px rgba(0,0,0,0.4);
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}

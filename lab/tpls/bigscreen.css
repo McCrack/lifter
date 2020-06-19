@@ -1,0 +1,113 @@
+#topbar{
+	box-sizing:border-box
+}
+#environment{
+	height:calc(100% - 36px);
+}
+#leftbar, #rightbar{
+	top:0px;
+	z-index:6;
+	height:100%;	
+	position:absolute;
+	transition:all 0.5s ease;
+}
+#leftbar{
+	left:0px;
+}
+#rightbar{
+	right:0px;
+}
+#left-panel{
+	height:calc(100% - 36px);
+}
+@media (max-width: 1260px){
+	#bodymode{
+		display:none;
+	}
+	#topbar,#environment{
+		margin:0px 41px;
+		width:calc(100% - 82px);
+	}
+	body.leftmode>#leftbar,body.rightmode>#rightbar{
+		width:40px;
+	}
+	body.leftmode>#leftbar:hover{
+		width:280px;
+	}
+	body.rightmode>#rightbar:hover{
+		width:580px;
+	}
+}
+@media (min-width: 1260px){
+	body.leftmode>#leftbar{
+		width:280px;
+	}
+	body.rightmode>#rightbar{
+		width:580px;
+	}
+}
+@media (max-width: 1540px){
+	body.rightmode>#leftbar,body.leftmode>#rightbar{
+		width:40px;
+	}
+	body.rightmode>#leftbar:hover{
+		width:280px;
+	}
+	body.leftmode>#rightbar:hover{
+		width:580px;
+	}
+}
+@media (min-width: 1260px) AND (max-width: 1540px){
+	#bodymode{
+		display:inline-block;
+	}
+	body.leftmode>#topbar,body.leftmode>#environment{
+		margin:0px 41px 0px 281px;
+		width:calc(100% - 322px);
+	}
+	body.rightmode>#topbar,body.rightmode>#environment{
+		margin:0px 581px 0px 41px;
+		width:calc(100% - 622px);
+	}
+}
+@media (min-width: 1540px){
+	#bodymode{
+		display:none;
+	}
+	#topbar,#environment{
+		margin:0px 581px 0px 281px;
+		width:calc(100% - 862px);
+	}
+	body.rightmode>#leftbar{
+		width:280px;
+	}
+	body.leftmode>#rightbar{
+		width:580px;
+	}
+}
+
+.tabbar{
+	width:40px;
+	height:100%;
+	text-align:center;
+}
+.tab{
+	height:100%;
+	width:calc(100% - 40px);
+}
+
+/* Box *****************************************************************/
+
+.box-body>.leftbar{
+	float:left;
+	width:250px;
+	overflow:auto;
+}
+.box-body>.environment{
+	float:right;
+	width:calc(100% - 250px);
+}
+.toolbar>span.tool,.toolbar>label.tool{
+	min-width:40px;
+	padding-top:6px;
+}

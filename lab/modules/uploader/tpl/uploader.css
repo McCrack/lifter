@@ -1,0 +1,28 @@
+
+#environment{
+
+}
+@media (max-width: 860px){
+	input[name='pathline']{
+		display:none;
+	}
+}
+@media (min-width: 860px){
+	input[name='pathline']{
+		color:#777;
+		text-align:left;
+		width:400px;
+		max-width:calc(100% - 360px);
+		
+	}
+}
+@media (min-width: 1420px){
+	#environment{ padding:0; }
+}
+
+
+
+/*
+	1280x1024 : -12px
+	1440x900 : -16px
+*/

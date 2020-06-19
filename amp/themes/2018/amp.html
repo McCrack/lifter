@@ -1,0 +1,88 @@
+<!doctype html>
+  <html ⚡ lang="<?=$page['language']?>" prefix="op: https://media.facebook.com/op#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <title><?=$title?></title>
+    <meta name="description" content="<?=$page['subheader']?>">
+    <link rel="canonical" href="<?=$canonical?>">
+
+    <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"NewsArticle",
+      "headline":"<?=$page['header']?>",
+      "datePublished":"<?=$created?>",
+      "dateModified":"<?=$modified?>",
+      "image":["<?=$page['preview']?>"],
+      "author":{
+        "@type":"Person",
+        "name":"<?=$page['Name']?>"
+      },
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"<?=$canonical?>"
+      },
+      "Publisher":{
+        "@type":"Organization",
+        "name":"Lifter",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://<?=$_SERVER['HTTP_HOST']?>/themes/2018/images/lifter.png",
+          "width":"58px",
+          "height":"58px"
+        }
+
+      }
+    }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom><?=$fonts?>body{margin:0;background-color:#F3F3F3;}a{color:#058;text-decoration:none;}#loft{font-size:0;padding:5px 0;background-color:#222;}#loft amp-img{border:1px solid #777;}#author{color:#278;padding:2px;position:relative;font:italic 15px tinos;}#author::before{content:"";left:0;bottom:0;width:42%;height:2px;display:block;position:absolute;background-color:#578;}time{color:#345;float:right;font:bold 15px/1.5 calibri;}article{color:#222;padding:20px;margin:0 auto;max-width:640px;font:18px "open sans";box-sizing:border-box;background-color:white;box-shadow:0 0 5px -3px rgba(0,0,0,.5);}article>header>h1{font:bold 30px ubuntu;}article>header>h1:first-line{font-size:110%;}article>header>h1:first-letter{color:#F25;}article h2{font:bold 22px "open sans";}article p{margin:20px 0;}figure{margin:0 -20px;}figcaption,figcaption>a{color:#AAA;padding:1px 6px;font:15px ubuntu;}blockquote{color:#555;margin:0;padding:4vh 10px;font:italic 18px tinos;background:url(/themes/2018/images/quotes.jpg) left top no-repeat;}ul,ol{padding-left:4vw;}li{margin:8px 0;font-size:16px;}</style>
+    <!--
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <amp-analytics type="googleanalytics">
+      <script type="application/json">
+      {
+        "vars":{
+          "account":"UA-51627207-1"
+        },
+        "triggers":{
+          "trackPageview":{
+            "on":"visible",
+            "request":"pageview",
+            "vars":{
+              "title":"<?=$title?>"
+            }
+          }
+        }
+      }
+      </script>
+    </amp-analytics>
+    <div id="loft" align="center">
+      <a href="/"><amp-img src="/logo-64x64.png" width="30" height="30"></amp-img></a>
+    </div>
+    <article>
+      <header>
+        <h1><?=$page['header']?></h1>
+        <h2><?=$page['subheader']?></h2>
+        <figure>
+          <amp-img src="<?=$page['preview']?>" width="640" height="336" layout="responsive"></amp-img>
+        </figure>
+      </header>
+      <?=gzdecode($page['content'])?>
+      <br>
+      <footer>
+        <time><?=date("d M, Y")?></time>
+        <span id="author"><?=$page['Name']?></span>
+      </footer>
+    </article>
+  </body>
+</html>

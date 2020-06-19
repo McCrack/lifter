@@ -1,0 +1,250 @@
+@media (max-width: 920px){
+	#environment{
+		height:100%;
+	}
+	#heading fieldset{
+		margin-bottom:6px;
+	}
+	#pub::before{
+		content:"pub";
+	}
+	#tags{
+		column-count:3;
+		-moz-column-count:3;
+		-webkit-column-count:3;
+	}
+	#html-editor{
+		height:500px;
+	}
+	#feed{
+		overflow:auto;
+		max-height:480px;
+		text-align:center;
+	}
+	a.sticker{
+		width:46%;
+		min-width:300px;
+		display:inline-block;
+	}
+}
+@media (min-width: 921px){
+	#created{
+		float:left;
+		width:60%;
+		margin:0px 0.5% 6px 0.5%;
+	}
+	#pub::before{
+		content:"published";
+	}
+	#keywords{
+		height:calc(100% - 536px);
+	}
+	#tags{
+		column-count:4;
+		-moz-column-count:4;
+		-webkit-column-count:4;
+		height:calc(100% - 84px);
+	}
+	#html-editor{
+		width:540px;
+		height:calc(100% - 36px);
+	}
+	a.sticker{
+		display:block;
+		width:calc(100% - 8px);
+	}
+}
+#heading{
+	color:#DDD;
+	background-color:#2E3A45;
+}
+#created input{
+	width:45%;
+	height:26px;
+	margin:5px 2%;
+	padding:4px 5px;
+	border-radius:3px;
+	border:1px solid #BBB;
+	background-color:#DDD;
+	box-sizing:border-box;
+	font-family:tools,main;
+}
+select[name="author"]{
+	width:98%;
+}
+#header,#subheader{
+	margin:0px;
+	width:100%;
+	height:68px;
+	resize:none;
+	padding:5px 10px;
+	border-width:0px;
+	box-sizing:border-box;
+	border-bottom:1px solid #CCC;
+}
+#header{
+	font:22px auxiliary;
+}
+#subheader{
+	color:grey;
+	font:18px main;
+}
+
+#keywords{
+	clear:left;
+	padding:5px 0px;
+	min-height:240px;
+}
+input[name="keywords"]{
+	width:95%;
+	height:26px;
+	padding:6px;
+	margin:0px 2%;
+	border-radius:3px;
+	border:1px solid #BBB;
+	background-color:#DDD;
+	box-sizing:border-box;
+}
+#tags{
+	margin:10px;
+	overflow:auto;
+	text-align:center;
+	column-rule:1px solid #555;
+	-moz-column-rule:1px solid #555;
+	-webkit-column-rule:1px solid #555;
+}
+#tags>span{
+	color:#DDD;
+	width:100%;
+	cursor:pointer;
+	font:16px/1.4 main;
+	display:inline-block;
+}
+#tags>span:hover{
+	color:#FFF;
+	font-weight:bold;
+}
+#rightbar .caption>span{
+	padding:0px 15px;
+	display:inline-block;
+	border-right:1px solid #AAA;
+}
+
+/**************************************/
+
+.log{
+	color:#555;
+	padding:10px;
+	min-height:100px;
+	overflow-y:auto;
+	background-color:white;	
+}
+.green{
+	color:#097;
+}
+.red{
+	color:#C04;
+}
+
+/**************************************/
+
+#feed{
+	overflow-y:auto;
+	height:calc(100% - 36px);
+	background-color:#E5E5E5;
+}
+a.sticker{
+	margin:4px;
+	text-align:left;
+	background-color:#FFF;
+	outline:1px dotted #CCC;
+	box-shadow:0px 10px 4px -9px rgba(0,0,0,0.5);
+}
+a.sticker>.header{
+	color:#555;
+	padding:0px 6px;
+	font:16px auxiliary;
+}
+a.sticker>.options{
+	color:#888;
+	margin:0px 8px;
+	font:14px main;
+	text-align:justify;
+}
+a.sticker>.options::after{
+	width:100%;
+	content:"";
+	display:inline-block;
+}
+a.sticker>.options>span{
+	margin-top:5px;
+	display:inline-block;
+}
+
+.pagination>a{
+	color:#777;
+	cursor:pointer;
+	font:16px main;
+	padding:6px 3px;
+	display:inline-block;
+}
+a.sticker:hover>.header,.pagination>a.selected,.pagination>a:hover{
+	color:#D04;
+}
+
+/**************************************/
+
+#docmap{
+	overflow:auto;
+	padding:10px 15px;
+	background-color:#333;
+	box-sizing:border-box;
+	height:calc(100% - 36px);
+	font:normal 18px/1.6 title;
+}
+.opening-tag,.closing-tag,.text-node{
+	opacity:0.8;
+	cursor:pointer;
+}
+.opening-tag{
+	color:#6BE;
+}
+.closing-tag{
+	color:#6C8;
+}
+.text-node{
+	color:#999;
+}
+.opening-tag::after,.closing-tag::after,.opening-tag::before,.closing-tag::before,.text-node::before{
+	color:#B34;
+	margin:0px 3px;
+}
+.opening-tag::before,.closing-tag::before{
+	content:"[";
+}
+.opening-tag::after,.closing-tag::after{
+	content:"]";
+}
+.text-node::before{
+	content:"#";
+}
+.opening-tag:hover,.closing-tag:hover,.text-node:hover{
+	color:#FFF;
+}
+#selected-range,#selected-range *{
+	color:#FFF;
+	opacity:1.0;
+	font-weight:bold;
+}
+
+.modules{
+	color:#555;
+	padding:12px;
+	display:block;
+	cursor:pointer;
+	font:18px auxiliary;
+	outline:1px outset #EEE;
+}
+.modules:hover{
+	background-color:#DAE0E5;
+}
